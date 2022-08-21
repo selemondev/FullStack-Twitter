@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-black font-roboto
+    }
+}
+
+@layer components {
+    .grid-center {
+        @apply grid place-items-center
+    }
+
+    .flex-center {
+        @apply flex items-center
+    }
+
+    .flex-between {
+        @apply flex justify-between items-center
+    }
+
+    .flex-around {
+        @apply flex justify-around items-center
+    }
+
+    .label {
+        @apply block text-white
+    }
+
+    .input-style {
+        @apply appearance-none py-2 px-2 mt-2 w-full rounded-md focus:outline-none focus:ring-1 focus:ring-[#03A9F4] bg-gray-400/30 text-white placeholder-gray-400
+    }
+
+    .error {
+        @apply text-red-500 pt-1
+    }
+
+    .btn {
+        @apply text-base w-full appearance-none focus:outline-none py-2.5 text-white rounded-lg bg-[#03A9F4] hover:bg-[#0192d5] md:py-3
+    }
+
+    .search-input {
+        @apply appearance-none py-1 placeholder-gray-400 text-white focus:outline-none focus:ring-1 focus:ring-[#03A9F4] bg-gray-700 px-2 rounded-md
+    }
+
+    .icon-style {
+        @apply text-white w-6 h-6
+    }
+}
