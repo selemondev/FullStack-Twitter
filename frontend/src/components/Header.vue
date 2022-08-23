@@ -4,7 +4,7 @@ import TwitterIcon from "../assets/twitter-icon.png";
 <template>
     <div>
         <header>
-            <nav class="w-full flex-between px-4 h-14">
+            <nav class="w-full border-b border-gray-900 flex-between px-4 h-14">
                 <div>
                     <img :src="TwitterIcon" alt="Twitter" class="w-10 h-10">
                 </div>

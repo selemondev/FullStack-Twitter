@@ -1,6 +1,6 @@
 <script setup>
-import { DotsHorizontalIcon, ShareIcon } from "@heroicons/vue/outline";
-import { HeartIcon, ChatIcon  } from "@heroicons/vue/solid";
+import { DotsHorizontalIcon, HeartIcon, ShareIcon, BookmarkIcon } from "@heroicons/vue/outline";
+import { ChatIcon } from "@heroicons/vue/solid";
 import TwitterIcon from "../assets/twitter-icon.png";
 </script>
 <template>
@@ -31,8 +31,8 @@ import TwitterIcon from "../assets/twitter-icon.png";
                 <DotsHorizontalIcon class="text-gray-600 h-7 w-7 self-start" />
             </div>
 
-            <div class="text-[#6e767d] py-2 flex justify-between xl:w-[420px] w-[250px]">
-                <div class="flex items-center space-x-1 group">
+            <div class="text-[#6e767d] py-2 flex-between xl:w-[500px] w-[250px]">
+                <div>
                     <div
                         class="icon-style w-10 h-10 bg-gray-800 hover:bg-gray-900 grid-center cursor-pointer rounded-lg  grid-center md:w-28 md:h-10">
                         <div class="flex-center space-x-3">
@@ -42,21 +42,33 @@ import TwitterIcon from "../assets/twitter-icon.png";
                     </div>
                 </div>
 
-                 <div>
+
+                <div>
                     <div
                         class="icon-style w-10 h-10 bg-gray-800 hover:bg-gray-900 grid-center cursor-pointer rounded-lg  grid-center md:w-28 md:h-10">
                         <div class="flex-center space-x-1">
-                            <ChatIcon class="w-6 h-6"/>
+                            <ChatIcon class="w-6 h-6" />
                             <p>Comment</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="icon-style group">
+
+                <div>
                     <div
                         class="icon-style w-10 h-10 bg-gray-800 hover:bg-gray-900 grid-center cursor-pointer rounded-lg  grid-center md:w-28 md:h-10">
                         <div class="flex-center space-x-3">
-                            <ShareIcon class="w-6 h-6"/>
+                            <BookmarkIcon class="w-6 h-6" />
+                            <p>Save</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div
+                        class="icon-style w-10 h-10 bg-gray-800 hover:bg-gray-900 grid-center cursor-pointer rounded-lg  grid-center md:w-28 md:h-10">
+                        <div class="flex-center space-x-3">
+                            <ShareIcon class="w-6 h-6" />
                             <p>Share</p>
                         </div>
                     </div>

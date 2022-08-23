@@ -4,8 +4,8 @@ import { required, minLength, email, helpers } from "@vuelidate/validators";
 import { reactive, computed, watchEffect, ref } from "vue";
 import { useRouter } from "vue-router";
 import TwitterIcon from "../assets/twitter-icon.png";
-// import { useAuthStore } from "../stores/authStore";
-// const authStore = useAuthStore();
+import { useAuthStore } from "../stores/authStore";
+const authStore = useAuthStore();
 const router = useRouter();
 const formData = reactive({
     username: "",
@@ -15,10 +15,10 @@ const formData = reactive({
 const token = ref("");
 const loading = ref(false);
 watchEffect(() => {
-    token.value = authStore.user,
-    loading.value = authStore.loading
+    token.value = authStore.token,
+    loading.value = authStore.loginLoading
     if(token.value) {
-        router.push("/home")
+        router.push("/edit")
     };
 });
 const rules = computed(() => {
@@ -30,20 +30,19 @@ const rules = computed(() => {
 });
 const v$ = useVuelidate(rules, formData);
 const handleSubmit = async () => {
-    // const result = await v$.value.$validate();
-    //  if(result) {
-    //     authStore.register(formData.username, formData.email, formData.password);
-    // }
-    // setTimeout(() => {
-    //     formData.username = "";
-    //     formData.email = "";
-    //     formData.password = "";
-    //     formData.confirmPassword = ""
-    // }, 1000)
+    const result = await v$.value.$validate();
+     if(result) {
+        authStore.login(formData.email, formData.password);
+    }
+    setTimeout(() => {
+        formData.username = "";
+        formData.email = "";
+        formData.password = "";
+    }, 1000)
 }
 </script>
 <template>
-<section class="grid-center pt-1 md:pt-10">
+<section class='grid-center pt-1 md:pt-10'>
     <div class="max-w-sm w-72 mt-10 mb-4 md:w-96 md:mt-6 md:mb-6">
         <form class="w-full px-6 py-4 bg-black/75 border border-gray-800 rounded-md shadow-sm" @submit.prevent="handleSubmit">
             <div class="grid-center pb-4">
