@@ -1,6 +1,6 @@
 <script setup>
 import TwitterIcon from "../assets/twitter-icon.png";
-import { BellIcon, MailIcon,SunIcon } from "@heroicons/vue/solid";
+import { BellIcon, MailIcon, SunIcon } from "@heroicons/vue/solid";
 import { ref } from "vue";
 const isOpen = ref(false);
 const handleClick = () => {
@@ -10,20 +10,20 @@ const handleClick = () => {
 <template>
     <div>
         <header>
-            <nav class="flex-between px-4 w-full h-14">
+            <nav class="flex-between fixed bg-black border-b border-gray-900 px-4 w-full h-14">
                 <div class="flex-center space-x-2">
                     <div>
                         <img :src="TwitterIcon" alt="Twitter" class="w-10 h-10" />
                     </div>
 
                     <div>
-                        <input type="text" placeholder="Search" class="search-input">
+                        <input type="search" class="search-input" placeholder="Search Twitter" required/>
                     </div>
                 </div>
 
-                <div>
+                <div class="hidden md:block">
                     <div class="flex-center space-x-4">
-                        <SunIcon class="icon-style"/>
+                        <SunIcon class="icon-style" />
                         <MailIcon class="icon-style" />
                         <BellIcon class="icon-style" />
                         <div class="relative inline-block ">
@@ -39,47 +39,47 @@ const handleClick = () => {
 
                             <!-- Dropdown menu -->
                             <div v-show="isOpen"
-                                class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl dark:bg-gray-800">
+                                class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl bg-[#000]">
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     view profile
                                 </a>
 
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Settings
                                 </a>
 
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Keyboard shortcuts
                                 </a>
 
-                                <hr class="border-gray-200 dark:border-gray-700 ">
+                                
 
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Company profile
                                 </a>
 
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Team
                                 </a>
 
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Invite colleagues
                                 </a>
 
-                                <hr class="border-gray-200 dark:border-gray-700 ">
+                                
 
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Help
                                 </a>
                                 <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
                                     Sign Out
                                 </a>
                             </div>
