@@ -19,7 +19,7 @@ watchEffect(() => {
     token.value = authStore.token,
     loading.value = authStore.registerLoading
     if(token.value) {
-        router.push("/")
+        router.push("/edit")
     };
 });
 const rules = computed(() => {

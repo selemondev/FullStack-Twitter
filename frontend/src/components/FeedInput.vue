@@ -28,7 +28,7 @@ async function sendTweet() {
 </script>
 <template>
   <div
-    :class="[loading ? ' flex p-3 bg-[#0f131a]  space-x-3 opacity-60' : 'flex bg-[#0f131a] rounded-md p-3 space-x-3']">
+    :class="[loading ? ' flex p-3 bg-[#0f131a] space-x-3 opacity-60' : 'flex bg-[#0f131a] rounded-md p-3 space-x-3']">
     <div>
       <img :src="TwitterIcon" class="h-11 w-11 rounded-full mr-4" />
     </div>

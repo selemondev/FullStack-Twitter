@@ -26,7 +26,11 @@ import TwitterIcon from "../assets/twitter-icon.png";
             </div>
 
             <div>
-                <h4 class="text-[#03A9F4] hover:font-bold cursor-pointer">My Profile</h4>
+                <h4 class="text-[#03A9F4] hover:font-bold cursor-pointer">
+                    <router-link to="/edit-profile">
+                        My Profile
+                    </router-link>
+                </h4>
             </div>
         </div>
     </div>

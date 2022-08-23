@@ -13,7 +13,9 @@ const handleClick = () => {
             <nav class="flex-between fixed bg-black border-b border-gray-900 px-4 w-full h-14">
                 <div class="flex-center space-x-2">
                     <div>
-                        <img :src="TwitterIcon" alt="Twitter" class="w-10 h-10" />
+                         <router-link to="/home">
+                            <img :src="TwitterIcon" alt="Twitter" class="w-10 h-10 cursor-pointer" />
+                         </router-link>
                     </div>
 
                     <div>
@@ -39,48 +41,20 @@ const handleClick = () => {
 
                             <!-- Dropdown menu -->
                             <div v-show="isOpen"
-                                class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl bg-[#000]">
+                                class="absolute right-0 z-20 w-48 py-2 mt-2 rounded-md shadow-xl bg-gray-900">
                                 <a href="#"
                                     class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    view profile
+                                    Profile
                                 </a>
 
                                 <a href="#"
                                     class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Settings
+                                    Bookmarks
                                 </a>
 
                                 <a href="#"
                                     class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Keyboard shortcuts
-                                </a>
-
-                                
-
-                                <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Company profile
-                                </a>
-
-                                <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Team
-                                </a>
-
-                                <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Invite colleagues
-                                </a>
-
-                                
-
-                                <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Help
-                                </a>
-                                <a href="#"
-                                    class="block px-4 py-3 text-sm text-gray-300 hover:text-gray-200  duration-200 ">
-                                    Sign Out
+                                    LogOut
                                 </a>
                             </div>
                         </div>
